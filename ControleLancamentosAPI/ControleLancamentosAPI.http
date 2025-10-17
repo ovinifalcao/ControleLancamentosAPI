@@ -1,13 +1,12 @@
 @ControleLancamentosAPI_HostAddress = http://localhost:5117
 
-POST {{ControleLancamentosAPI_HostAddress}}/Lancamentos/
+POST {{ControleLancamentosAPI_HostAddress}}/Lancamento/
 Accept: application/json
-
+Content-Type: application/json
 {
   "natureza": 1,
   "operador": "OP510",
   "descricao": "Venda",
   "valor": 542.23
 }
-
 ###
