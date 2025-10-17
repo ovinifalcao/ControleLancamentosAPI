@@ -7,15 +7,16 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace ControleLancamentosApiTestes.Configuracoes.Base;
 
-public class DatabaseTestBase
+public class DatabaseTesteBase
 {
     public readonly LancamentosContexto _contexto;
     private readonly IConfiguration _configuration;
     protected IServiceProvider _serviceScope;
     public Faker Faker = new Faker("pt_BR");
 
-    public DatabaseTestBase()
+    public DatabaseTesteBase()
     {
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         _configuration = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json")
             .Build();

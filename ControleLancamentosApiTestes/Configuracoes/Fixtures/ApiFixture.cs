@@ -3,6 +3,6 @@
 namespace ControleLancamentosApiTestes.Configuracoes.Fixtures;
 
 [CollectionDefinition("ApiCollection")]
-public class ApiFixture : IClassFixture<ApiTestBase>
+public class ApiFixture : IClassFixture<ApiTesteBase>
 {
 }
