@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres_lancamentos_database
+    restart: always
+    environment:
+      POSTGRES_DB: lancamentos_db
+      POSTGRES_USER: lncmnts_adm_usr
+      POSTGRES_PASSWORD: lncmnts_pwd
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
