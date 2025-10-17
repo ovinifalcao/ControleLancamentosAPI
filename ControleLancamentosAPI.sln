@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItens", "SolutionIt
 		compose.yml = compose.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleLancamentosApiTestes", "ControleLancamentosApiTestes\ControleLancamentosApiTestes.csproj", "{641ABF4A-C9F8-498E-89F1-B484D70B1C76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{AB458689-861B-41AE-A723-FAA229BE5FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB458689-861B-41AE-A723-FAA229BE5FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB458689-861B-41AE-A723-FAA229BE5FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641ABF4A-C9F8-498E-89F1-B484D70B1C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641ABF4A-C9F8-498E-89F1-B484D70B1C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641ABF4A-C9F8-498E-89F1-B484D70B1C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641ABF4A-C9F8-498E-89F1-B484D70B1C76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

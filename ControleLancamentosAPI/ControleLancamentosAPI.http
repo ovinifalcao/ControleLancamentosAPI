@@ -1,6 +1,13 @@
 @ControleLancamentosAPI_HostAddress = http://localhost:5117
 
-GET {{ControleLancamentosAPI_HostAddress}}/weatherforecast/
+POST {{ControleLancamentosAPI_HostAddress}}/Lancamentos/
 Accept: application/json
+
+{
+  "natureza": 1,
+  "operador": "OP510",
+  "descricao": "Venda",
+  "valor": 542.23
+}
 
 ###
