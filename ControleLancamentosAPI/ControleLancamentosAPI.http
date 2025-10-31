@@ -4,9 +4,9 @@ POST {{ControleLancamentosAPI_HostAddress}}/Lancamento/
 Accept: application/json
 Content-Type: application/json
 {
-  "natureza": 1,
-  "operador": "OP510",
-  "descricao": "Venda",
-  "valor": 542.23
+  "natureza": 2,
+  "operador": "OP511",
+  "descricao": "Venda Teste",
+  "valor": 5222.23
 }
 ###

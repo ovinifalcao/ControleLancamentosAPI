@@ -1,6 +1,7 @@
 using ControleLancamentosAPI.Data;
 using ControleLancamentosAPI.Data.Models;
 using ControleLancamentosAPI.Endpoints;
+using ControleLancamentosAPI.Servicos;
 using ControleLancamentosAPI.Validacoes;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,12 @@ builder.Services.AddMediatR(config =>
     config.RegisterServicesFromAssemblyContaining<Program>();
 });
 builder.Services.AddScoped<RegistrarLancamentoRequestValidacao>();
+
+var configuracoesMensageria = new MensageriaConfiguracoes();
+builder.Configuration.GetSection("Mensageria")
+    .Bind(configuracoesMensageria);
+builder.Services.AddSingleton(configuracoesMensageria);
+builder.Services.AddScoped<IMensageria, Mensageria>();
 
 
 var app = builder.Build();
