@@ -1,5 +1,9 @@
 ﻿# ControleLancamentosAPI
 
+[![.NET Version](https://img.shields.io/badge/.NET-8.0-purple?style=for-the-badge&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/) [![Docker](https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/) [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Latest-336791?style=for-the-badge&logo=postgresql&logoColor=white)]() [![Kafka](https://img.shields.io/badge/Kafka-Latest-FFD200?style=for-the-badge&logo=apachekafka&logoColor=black)]()
+ [![Redis](https://img.shields.io/badge/Redis-Latest-red?style=for-the-badge&logo=redis&logoColor=white)](https://redis.io/) [![Code Coverage](https://img.shields.io/badge/Code%20Coverage-70%25-brightgreen?style=for-the-badge&logo=Codecov&logoColor=white)]()
+
+
 ## :book: Introdução
 
 O **ControleLancamentosAPI** é uma aplicação de API RESTful desenvolvida para gerenciar e receber lançamentos financeiros. Faz parte do sistema `Controle e Consolidação de Lançamentos` que está melhor descrito [neste repositório](https://github.com/ovinifalcao/ControleEConsolidacaoDeLancamentos). O principal objetivo é fornecer endpoints para registrar movimentações de lançamento de operações financeiras nos seguintes moldes: 
