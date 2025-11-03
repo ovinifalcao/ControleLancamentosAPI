@@ -30,6 +30,13 @@ builder.Services.AddScoped<IMensageria, Mensageria>();
 
 var app = builder.Build();
 
+using (var scopo = app.Services.CreateScope())
+{
+    var contexto = scopo.ServiceProvider.GetRequiredService<LancamentosContexto>();
+    contexto.Database.EnsureDeleted();
+    contexto.Database.Migrate();
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

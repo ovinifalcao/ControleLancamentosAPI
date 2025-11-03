@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ControleLancamentosAPI.Data.Migracoes
+namespace ControleLancamentosAPI.data.migracoes
 {
     /// <inheritdoc />
     public partial class inicial : Migration
@@ -24,7 +24,7 @@ namespace ControleLancamentosAPI.Data.Migracoes
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Data = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Data = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     Natureza = table.Column<NaturezaEnum>(type: "natureza", nullable: false),
                     Operador = table.Column<string>(type: "text", nullable: false),
                     Descricao = table.Column<string>(type: "text", nullable: false),

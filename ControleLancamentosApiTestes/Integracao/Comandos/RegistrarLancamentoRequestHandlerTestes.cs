@@ -1,11 +1,13 @@
 ﻿using Bogus;
 using ControleLancamentosAPI.Data;
 using ControleLancamentosAPI.Data.Comandos;
+using ControleLancamentosAPI.Servicos;
 using ControleLancamentosApiTestes.Configuracoes.Base;
 using ControleLancamentosApiTestes.Criadores;
 using FluentAssertions;
 using FluentAssertions.Execution;
 using Microsoft.EntityFrameworkCore;
+using NSubstitute;
 
 namespace ControleLancamentosApiTestes.Integracao.Comandos
 {
@@ -14,18 +16,20 @@ namespace ControleLancamentosApiTestes.Integracao.Comandos
     {
         private readonly Faker _faker;
         private readonly LancamentosContexto _contexto;
+        private readonly IMensageria _mensageria;
 
         public RegistrarLancamentoRequestHandlerTestes(DatabaseTesteBase fixture)
         {
             _faker = fixture.Faker;
             _contexto = fixture._contexto;
+            _mensageria = Substitute.For<IMensageria>();
         }
 
         [Fact]
         public async Task Deve_GravarRegistroDeLancamentoCorretamente()
         {
             var registro = new CriadorRegistrarLancamentoRequest().Generate();
-            var handler = new RegistrarLancamentoRequestHandler(_contexto);
+            var handler = new RegistrarLancamentoRequestHandler(_contexto, _mensageria);
 
             var resultado = await handler.Handle(registro, new CancellationToken());
 
@@ -48,7 +52,7 @@ namespace ControleLancamentosApiTestes.Integracao.Comandos
         public async Task Deve_GravarRegistroDeLancamentoComNumeroDeLancamento()
         {
             var registro = new CriadorRegistrarLancamentoRequest().Generate();
-            var handler = new RegistrarLancamentoRequestHandler(_contexto);
+            var handler = new RegistrarLancamentoRequestHandler(_contexto, _mensageria);
 
             var resultado = await handler.Handle(registro, new CancellationToken());
 

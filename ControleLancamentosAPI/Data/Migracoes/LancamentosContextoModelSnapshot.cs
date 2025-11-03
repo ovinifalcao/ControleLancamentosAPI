@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace ControleLancamentosAPI.Data.Migracoes
+namespace ControleLancamentosAPI.data.migracoes
 {
     [DbContext(typeof(LancamentosContexto))]
     partial class LancamentosContextoModelSnapshot : ModelSnapshot
@@ -34,7 +34,7 @@ namespace ControleLancamentosAPI.Data.Migracoes
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("Data")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Descricao")
                         .IsRequired()

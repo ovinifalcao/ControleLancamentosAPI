@@ -10,10 +10,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace ControleLancamentosAPI.Data.Migracoes
+namespace ControleLancamentosAPI.data.migracoes
 {
     [DbContext(typeof(LancamentosContexto))]
-    [Migration("20251017124204_inicial")]
+    [Migration("20251103025356_inicial")]
     partial class inicial
     {
         /// <inheritdoc />
@@ -37,7 +37,7 @@ namespace ControleLancamentosAPI.Data.Migracoes
                         .HasColumnType("uuid");
 
                     b.Property<DateTime>("Data")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
