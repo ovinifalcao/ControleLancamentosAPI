@@ -8,9 +8,12 @@ namespace ControleLancamentosAPI.Endpoints;
 
 public static class LancamentosEndpoint
 {
-    public static void MapLancamentoEndpoint(this IEndpointRouteBuilder app)
+    public static void MapLancamentoEndpoint(this IEndpointRouteBuilder app, bool shouldConfigureAuth)
     {
-        app.MapPost("/Lancamento", RegistrarLancamento);
+        var map = app.MapPost("/Lancamento", RegistrarLancamento);
+
+        if(shouldConfigureAuth)
+            map.RequireAuthorization("OperadorRole");
     }
 
     public static async Task<IResult> RegistrarLancamento(
